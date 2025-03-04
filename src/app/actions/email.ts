@@ -1,24 +1,13 @@
 'use server';
 import nodemailer from 'nodemailer';
 
-// Función para obtener variables de entorno con logs detallados
-function getEnvVar(name: string, defaultValue: string): string {
-  const value = process.env[name];
-  if (!value) {
-    console.log(`[ENV] ${name} no está definido, usando valor por defecto.`);
-    return defaultValue;
-  }
-  console.log(`[ENV] ${name} está definido`);
-  return value;
-}
-
 // Variables de entorno con logging mejorado
-const MAIL_HOST = getEnvVar('MAIL_HOST', 'email-smtp.us-east-1.amazonaws.com');
-const MAIL_PORT = parseInt(getEnvVar('MAIL_PORT', '465'));
-const MAIL_USERNAME = getEnvVar('MAIL_USERNAME', '');
-const MAIL_PASSWORD = getEnvVar('MAIL_PASSWORD', '');
-const SENDER_EMAIL = getEnvVar('SENDER_EMAIL', 'diego.cotrian@gmail.com');
-const RECIPIENT_EMAIL = getEnvVar('RECIPIENT_EMAIL', 'diego.cotrian@gmail.com');
+const MAIL_HOST = process.env.NEXT_PUBLIC_MAIL_HOST;
+const MAIL_PORT = parseInt(process.env.NEXT_PUBLIC_MAIL_PORT || '465');
+const MAIL_USERNAME = process.env.NEXT_PUBLIC_MAIL_USERNAME;
+const MAIL_PASSWORD = process.env.NEXT_PUBLIC_MAIL_PASSWORD;
+const SENDER_EMAIL = process.env.NEXT_PUBLIC_SENDER_EMAIL;
+const RECIPIENT_EMAIL = process.env.NEXT_PUBLIC_RECIPIENT_EMAIL;
 
 // Server Action para enviar email con Nodemailer usando Amazon SES
 export async function sendWaitlistEmail(formData: { email: string }) {
