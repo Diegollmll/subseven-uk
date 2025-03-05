@@ -27,7 +27,7 @@ export default function Footer() {
           >
             <Link href="/">
               <Image
-                src={"/forkulogo.png"}
+                src={"https://elasticbeanstalk-us-east-1-867968001024.s3.us-east-1.amazonaws.com/logos/uploads/Fork+U+logo+Final+long-04.png"}
                 alt="ForkU Logo"
                 width={150}
                 height={50}
