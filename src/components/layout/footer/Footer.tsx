@@ -1,7 +1,7 @@
-'use client'
 import Link from 'next/link'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+import * as motion from "framer-motion/client";
+
 
 export default function Footer() {
   return (
@@ -18,24 +18,17 @@ export default function Footer() {
 
       <div className="container mx-auto px-6 relative z-10 py-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          {/* Logo and Company Info */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="space-y-6"
-          >
-              <Image
-                src={"/logo.png"}
-                alt="ForkU Logo"
-                width={150}
-                height={50}
-                className="mb-4"
-              />
-            <p className="text-gray-400 text-sm">
-              From the leaders in forklift safety training and OSHA compliance.
-            </p>
-          </motion.div>
+
+          <Image
+            src={"/logo.png"}
+            alt="ForkU Logo"
+            width={150}
+            height={50}
+            className="mb-4"
+          />
+          <p className="text-gray-400 text-sm">
+            From the leaders in forklift safety training and OSHA compliance.
+          </p>
 
           {/* Navigation Links */}
           <motion.div
@@ -117,14 +110,14 @@ export default function Footer() {
         </div>
 
         {/* Download App Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           className="mt-20 flex flex-col md:flex-row justify-between items-center"
         >
           <div className="flex items-center space-x-4">
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-[#FF1493] text-white px-6 py-3 rounded-full font-mono hover:bg-[#39FF14] hover:text-black transition-colors"
@@ -140,9 +133,9 @@ export default function Footer() {
             <p>© 2025 ForkU. All rights reserved.</p>
             <p className="flex items-center gap-2">
               Designed & Developed by{" "}
-              <Link 
-                href="https://github.com/williamsanchez0721" 
-                target="_blank" 
+              <Link
+                href="https://github.com/williamsanchez0721"
+                target="_blank"
                 className="text-[#FF1493] hover:text-[#39FF14] transition-colors"
               >
                 William Lopez
