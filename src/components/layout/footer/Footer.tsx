@@ -19,16 +19,20 @@ export default function Footer() {
       <div className="container mx-auto px-6 relative z-10 py-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
 
-          <Image
-            src={"/logo.png"}
-            alt="ForkU Logo"
-            width={150}
-            height={50}
-            className="mb-4"
-          />
-          <p className="text-gray-400 text-sm">
-            From the leaders in forklift safety training and OSHA compliance.
-          </p>
+          <div>
+            <Image
+              src="/logo.png"
+              alt="ForkU Logo"
+              width={150}
+              height={50}
+              className="mb-4"
+              priority
+              unoptimized={true}
+            />
+            <p className="text-gray-400 text-sm">
+              From the leaders in forklift safety training and OSHA compliance.
+            </p>
+          </div>
 
           {/* Navigation Links */}
           <motion.div
