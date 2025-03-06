@@ -25,15 +25,13 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
             className="space-y-6"
           >
-            <Link href="/">
               <Image
-                src={"https://elasticbeanstalk-us-east-1-867968001024.s3.us-east-1.amazonaws.com/logos/uploads/Fork+U+logo+Final+long-04.png"}
+                src={"/logo.png"}
                 alt="ForkU Logo"
                 width={150}
                 height={50}
                 className="mb-4"
               />
-            </Link>
             <p className="text-gray-400 text-sm">
               From the leaders in forklift safety training and OSHA compliance.
             </p>
