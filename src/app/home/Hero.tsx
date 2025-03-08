@@ -38,7 +38,7 @@ export default function Hero() {
               THE SAFETY <br className="hidden sm:block" />
               PLATFORM <br className="hidden sm:block" />
               BUILT FOR <br className="hidden sm:block" />
-              FORKLIFT 
+              FORKLIFTS
             </motion.h1>
             <motion.p 
               className="text-base sm:text-lg text-gray-100 tracking-wide max-w-xl mx-auto lg:mx-0"
@@ -46,7 +46,7 @@ export default function Hero() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
             >
-              Ensuring OSHA Compliance Made Simple
+              Safety Driven. U Focused.
             </motion.p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button
@@ -56,12 +56,12 @@ export default function Hero() {
               >
                 JOIN THE WAITLIST
               </button>
-              <button
+              {/* <button
                 className="w-full sm:w-auto bg-white text-zinc-900 px-6 sm:px-8 py-3 rounded-full font-medium hover:bg-[#FF1493] hover:text-white transition-colors transform hover:scale-105 active:scale-95 text-sm sm:text-base"
                 aria-label="Learn more about ForkU"
               >
                 LEARN MORE
-              </button>
+              </button> */}
             </div>
           </motion.div>
           

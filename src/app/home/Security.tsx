@@ -16,7 +16,9 @@ export default function Security() {
               transition={{ duration: 0.6 }}
               className="text-6xl lg:text-[80px] font-bold leading-none tracking-tight title-font uppercase"
             >
-              Simplified Compliance <br />Tracking
+              EASY
+              COMPLIANCE <br />
+              FINALLY
             </motion.h2>
             
             <motion.p
@@ -25,7 +27,7 @@ export default function Security() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-gray-300 text-lg leading-relaxed max-w-lg"
             >
-              Navigating OSHA compliance can be daunting. ForkU reimagines safety training, ensuring that no matter what happens, your certification process is straightforward and your knowledge is up-to-date.
+              Let&apos;s be real, OSHA compliance can be a mess. But not with ForkU. We make it simple to track your operator and vehicle safety. Certs, inspections, and records - all easy to manage. Stay up-to-date and keep your fleet running smoothly, without the stress.
             </motion.p>
 
             <motion.div
