@@ -114,7 +114,7 @@ export default function Footer() {
         </div>
 
         {/* Download App Section */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -129,7 +129,7 @@ export default function Footer() {
               DOWNLOAD FORKU APP
             </motion.button>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Copyright and Credits */}
         <div className="mt-20 pt-8 border-t border-white/10">

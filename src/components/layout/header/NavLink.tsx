@@ -35,6 +35,21 @@ export default function NavLink() {
         >
             <motion.div variants={itemVariants}>
                 <Link 
+                    href="/" 
+                    className="hover:text-[#FF1493] transition-colors duration-300 transform hover:translate-x-2 text-start relative group title-font"
+                >
+                    <span className="relative">
+                        HOME
+                        <motion.span 
+                            className="absolute -bottom-2 left-0 w-0 h-1 bg-[#39FF14] group-hover:w-full transition-all duration-300"
+                            initial={{ width: 0 }}
+                            whileHover={{ width: "100%" }}
+                        />
+                    </span>
+                </Link>
+            </motion.div>
+            {/* <motion.div variants={itemVariants}>
+                <Link 
                     href="#" 
                     className="hover:text-[#FF1493] transition-colors duration-300 transform hover:translate-x-2 text-start relative group title-font"
                 >
@@ -47,9 +62,9 @@ export default function NavLink() {
                         />
                     </span>
                 </Link>
-            </motion.div>
+            </motion.div> */}
 
-            <motion.div variants={itemVariants}>
+            {/* <motion.div variants={itemVariants}>
                 <Link 
                     href="#" 
                     className="hover:text-[#FF1493] transition-colors duration-300 transform hover:translate-x-2 text-start relative group title-font"
@@ -63,11 +78,11 @@ export default function NavLink() {
                         />
                     </span>
                 </Link>
-            </motion.div>
+            </motion.div> */}
 
             <motion.div variants={itemVariants}>
                 <Link 
-                    href="#" 
+                    href="/blog" 
                     className="hover:text-[#FF1493] transition-colors duration-300 transform hover:translate-x-2 text-start relative group title-font"
                 >
                     <span className="relative">
@@ -81,7 +96,7 @@ export default function NavLink() {
                 </Link>
             </motion.div>
 
-            <motion.div variants={itemVariants}>
+            {/* <motion.div variants={itemVariants}>
                 <Link 
                     href="#" 
                     className="hover:text-[#FF1493] transition-colors duration-300 transform hover:translate-x-2 text-start relative group title-font"
@@ -95,7 +110,7 @@ export default function NavLink() {
                         />
                     </span>
                 </Link>
-            </motion.div>
+            </motion.div> */}
         </motion.nav>
     );
 }

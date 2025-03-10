@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
     // Dominios permitidos para imágenes
     domains: [
       'localhost',
-      'd14z61vafypzck.amplifyapp.com', // Reemplaza con tu dominio de Amplify
+      'forku.app', // Reemplaza con tu dominio de Amplify
       'subseven-uk.vercel.app' // Reemplaza con tu dominio de Vercel
     ],
   },

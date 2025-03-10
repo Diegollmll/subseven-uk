@@ -36,27 +36,18 @@ export default function Safety() {
                         transition={{ duration: 0.4 }}
                         className="space-y-8"
                     >
-                        <h2 className="text-7xl font-bold text-white title-font leading-none">
-                            U DRIVE <br/>
-                            <span className="text-[#FF1493]">SAFETY</span>
+                        <h2 className="text-7xl 2xl:text-8xl font-bold text-white title-font leading-none">
+                            U DRIVE <span className="text-[#FF1493]"> SAFETY</span>
                         </h2>
 
                         <div className="flex flex-wrap gap-4 pt-6">
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="px-8 py-3 rounded-full bg-[#FF1493] text-white font-medium hover:bg-[#39FF14] hover:text-black transition-colors"
+                                className="px-8 py-3 2xl:px-12 2xl:py-4 text-lg 2xl:text-xl rounded-full bg-[#FF1493] text-white font-medium hover:bg-[#39FF14] hover:text-black transition-colors"
                                 onClick={handleOpenPopup}
                             >
                                 JOIN THE WAITLIST
-                            </motion.button>
-
-                            <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="px-8 py-3 rounded-full text-white font-medium border border-white/30 hover:bg-white/10 transition-colors"
-                            >
-                                GET STARTED (Coming Soon)
                             </motion.button>
                         </div>
                     </motion.div>

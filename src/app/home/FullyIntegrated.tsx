@@ -16,9 +16,9 @@ export default function FullyIntegrated() {
       {/* Background Text */}
       <div className="absolute flex items-center pl-20 lg:pl-52 pb-44 inset-0 opacity-10 select-none pointer-events-none">
         <div className="text-7xl lg:text-[15vw] font-bold text-white leading-none uppercase">
-          Forklift
-          <br />
-          Safety
+          Simple <br />
+          Smart <br />
+          Safe
         </div>
       </div>
 
@@ -55,10 +55,10 @@ export default function FullyIntegrated() {
           >
             <div className='flex flex-col gap-4'>
               <h2 className="text-5xl lg:text-7xl max-w-2xl font-extrabold leading-tight title-font">
-                Master Forklift Safety with Confidence
+                MASTER FORKLIFT SAFETY
               </h2>
               <p className="text-lg text-gray-300 leading-relaxed max-w-xl">
-                ForkU&apos;s app and resources are developed and designed with U in mind. Our comprehensive platform simplifies the complexities of OSHA regulations. Access comprehensive training materials, track your certification progress, and stay updated with the latest safety protocols.
+                ForkU is all about making your life easier when it comes to forklift safety. Our app puts everything you need right in your pocket. Track your training, do those pre-shift inspections without the hassle, stay on top of your certifications and report incidents fast. Simple. Smart. Safe. That&apos;s ForkU!
               </p>
             </div>
             <div className="flex flex-wrap gap-4 pt-6">
@@ -67,15 +67,15 @@ export default function FullyIntegrated() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-3 rounded-full bg-[#FF1493] text-white font-medium transition-colors"
               >
-                EXPLORE THE APP
+                EXPLORE FEATURES
               </motion.button>
-              <motion.button
+              {/* <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-3 rounded-full text-white font-medium border border-white/30 hover:bg-[--hi-vis-green] hover:text-zinc-900 transition-colors"
               >
-                EXPLORE FEATURES
-              </motion.button>
+                EXPLORE THE APP
+              </motion.button> */}
             </div>
           </motion.div>
       </div>
