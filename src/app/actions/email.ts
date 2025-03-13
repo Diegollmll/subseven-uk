@@ -131,5 +131,6 @@ export async function sendWaitlistEmail(formData: { email: string }) {
       success: false, 
       error: 'Error al enviar el email: ' + emailError.message
     };
+    }
   }
 
