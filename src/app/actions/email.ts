@@ -64,7 +64,7 @@ export async function sendWaitlistEmail(formData: { email: string }) {
           <div style="width: 100%; background-color: #000; position: relative; text-align: center;">
             <img src="https://elasticbeanstalk-us-east-1-867968001024.s3.us-east-1.amazonaws.com/WhatsApp+Image+2025-03-12+at+9.29.13+PM.jpeg" alt="ForkU - Simple. Smart. Safe." style="width: 100%; max-width: 600px; display: block; margin: 0 auto;">
           </div>
-          
+      
           <!-- Main Content -->
           <div style="padding: 30px; background-color: white;">
             <p style="margin-bottom: 20px; font-size: 16px; line-height: 1.5;">You're about to unlock a platform made just for you. Safety, compliance, getting more done – all way easier from here.</p>
@@ -132,4 +132,4 @@ export async function sendWaitlistEmail(formData: { email: string }) {
       error: 'Error al enviar el email: ' + emailError.message
     };
   }
-}
+
