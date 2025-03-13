@@ -1,11 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Configuración de imágenes
   images: {
-    // Desactivar la optimización de imágenes para que funcione en Amplify
     unoptimized: true,
-    // Mantener los patrones remotos
     remotePatterns: [
       {
         protocol: 'https',
@@ -14,18 +11,14 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
-    // Dominios permitidos para imágenes
     domains: [
       'localhost',
-      'forku.app', // Reemplaza con tu dominio de Amplify
-      'subseven-uk.vercel.app' // Reemplaza con tu dominio de Vercel
+      'forku.app',
+      'subseven-uk.vercel.app'
     ],
   },
-  // Configuración para archivos estáticos
   assetPrefix: process.env.NODE_ENV === 'production' ? undefined : undefined,
-  // Configuración experimental
   experimental: {
-    // Mantener la configuración de Turbopack vacía
     turbo: {}
   },
 };
