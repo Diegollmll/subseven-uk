@@ -37,7 +37,7 @@ export default function Safety() {
                         className="space-y-8"
                     >
                         <h2 className="text-7xl 2xl:text-8xl font-bold text-white title-font leading-none">
-                            U DRIVE <span className="text-[#FF1493]"> SAFETY</span>
+                        <span className="text-[#FF1493]">U </span> DRIVE SAFETY  
                         </h2>
 
                         <div className="flex flex-wrap gap-4 pt-6">
@@ -55,9 +55,9 @@ export default function Safety() {
             </div>
 
             {/* Floating Elements */}
-            <div className="absolute top-1/4 left-10 w-3 h-3 bg-[#FF1493] rounded-full animate-pulse" />
+            {/* <div className="absolute top-1/4 left-10 w-3 h-3 bg-[#FF1493] rounded-full animate-pulse" />
             <div className="absolute bottom-1/4 right-10 w-2 h-2 bg-[#39FF14] rounded-full animate-pulse" />
-            <div className="absolute top-1/2 right-1/4 w-4 h-4 bg-[#FFFF00] rounded-full opacity-50 animate-pulse" />
+            <div className="absolute top-1/2 right-1/4 w-4 h-4 bg-[#FFFF00] rounded-full opacity-50 animate-pulse" /> */}
 
             {isPopupOpen && <JoinWaitlistPopup isOpen={isPopupOpen} setIsOpen={setIsPopupOpen} />}
         </section>

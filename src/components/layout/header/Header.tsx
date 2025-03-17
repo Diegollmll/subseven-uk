@@ -38,7 +38,7 @@ export default function Header() {
                             alt="Logo"
                             width={120}
                             height={120}
-                            className={`w-full max-w-20 md:max-w-24`}
+                            className={`w-full max-w-28 md:max-w-32`}
                             loading="eager"
                             onClick={() => router.push('/')}
                         />
@@ -49,7 +49,7 @@ export default function Header() {
                         alt="Logo"
                         width={120}
                         height={120}
-                        className={`w-full max-w-20 md:max-w-28`}
+                        className={`w-full max-w-50 md:max-w-52`}
                         loading="eager"
                         onClick={() => router.push('/')}
                     />

@@ -32,7 +32,7 @@ export default function FullyIntegrated() {
             <div className="relative z-10 flex justify-center w-full pb-20">
               <motion.div>
                 <Image
-                  src="/phoneforku.svg"
+                  src="/forkU.svg"
                   alt="ForkU App Preview"
                   width={600}
                   height={800}
@@ -81,9 +81,9 @@ export default function FullyIntegrated() {
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute top-1/4 left-10 w-3 h-3 bg-[#4B8B76] rounded-full" />
+      {/* <div className="absolute top-1/4 left-10 w-3 h-3 bg-[#4B8B76] rounded-full" />
       <div className="absolute bottom-1/4 right-10 w-2 h-2 bg-white rounded-full" />
-      <div className="absolute top-1/2 right-1/4 w-4 h-4 bg-blue-500 rounded-full opacity-50" />
+      <div className="absolute top-1/2 right-1/4 w-4 h-4 bg-blue-500 rounded-full opacity-50" /> */}
     </section>
   )
 } 

@@ -36,7 +36,7 @@ export default function Security() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className='pb-20'
             >
-              <Link href={'/learnmore'} className="w-full hover:underline text-white text-lg font-medium">
+              <Link href={'/blog/osha-compliance'} className="w-full hover:underline text-white text-lg font-medium">
                 LEARN MORE ABOUT COMPLIANCE
               </Link>
             </motion.div>
@@ -52,7 +52,7 @@ export default function Security() {
           >
             <div className="relative">
               <Image
-                src="/security2.png"
+                src="/manforku.jpg"
                 alt="Forklift Operator using ForkU app"
                 width={1920}
                 height={1080}

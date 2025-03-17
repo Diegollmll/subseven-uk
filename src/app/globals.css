@@ -88,3 +88,76 @@ body {
   transform: translateY(-100%);
   transition: opacity 300ms, transform 300ms;
 }
+.prose {
+  --tw-prose-body: theme('colors.gray.300');
+  --tw-prose-headings: theme('colors.white');
+  --tw-prose-lead: theme('colors.gray.300');
+  --tw-prose-links: theme('colors.yellow.400');
+  --tw-prose-bold: theme('colors.white');
+  --tw-prose-counters: theme('colors.gray.400');
+  --tw-prose-bullets: theme('colors.gray.400');
+  --tw-prose-hr: theme('colors.gray.700');
+  --tw-prose-quotes: theme('colors.gray.300');
+  --tw-prose-quote-borders: theme('colors.gray.700');
+  --tw-prose-captions: theme('colors.gray.400');
+  --tw-prose-code: theme('colors.white');
+  --tw-prose-pre-code: theme('colors.gray.300');
+  --tw-prose-pre-bg: 'rgba(0, 0, 0, 0.5)';
+  --tw-prose-th-borders: theme('colors.gray.700');
+  --tw-prose-td-borders: theme('colors.gray.700');
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+.prose h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+.prose h2 {
+  font-size: 1.75rem;
+  margin-top: 2em;
+}
+
+.prose p {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  line-height: 1.6;
+}
+
+.prose ul {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.prose li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-left: 0.25em;
+}
+
+.prose li::before {
+  color: var(--tw-prose-bullets);
+}
+
+.prose strong {
+  color: white;
+  font-weight: 600;
+}
+
+.prose a {
+  color: #39FF14;
+  text-decoration: none;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+}

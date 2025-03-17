@@ -53,46 +53,52 @@ export async function sendWaitlistEmail(formData: { email: string }) {
       throw verifyError;
     }
     // Enviar email directamente al usuario que se registró
-    const mailOptions = {
-      from: SENDER_EMAIL,
-      to: email, // Enviar al email del usuario que se registró
-      subject: 'Welcome to ForkU - Safer Forklifts, Right Here.',
-      text: `Welcome to ForkU! You've been added to our waitlist.`,
-      html: `
-        <div style="font-family: Arial, sans-serif; color: #333; max-width: 600px; margin: 0 auto; padding: 0; border-radius: 10px; overflow: hidden; border: 1px solid #eee; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
-          <!-- Header Image Banner -->
-          <div style="width: 100%; background-color: #000; position: relative; text-align: center;">
-            <img src="https://elasticbeanstalk-us-east-1-867968001024.s3.us-east-1.amazonaws.com/WhatsApp+Image+2025-03-12+at+9.29.13+PM.jpeg" alt="ForkU - Simple. Smart. Safe." style="width: 100%; max-width: 600px; display: block; margin: 0 auto;">
-          </div>
+    // Enviar email directamente al usuario que se registró
+const mailOptions = {
+  from: SENDER_EMAIL,
+  to: email, // Enviar al email del usuario que se registró
+  subject: 'Welcome to ForkU - Safer Forklifts, Right Here.',
+  text: `Welcome to ForkU! You've been added to our waitlist.`,
+  html: `
+    <div style="font-family: Arial, sans-serif; color: #333; max-width: 600px; margin: 0 auto; padding: 0; border-radius: 10px; overflow: hidden; border: 1px solid #eee; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
+      <!-- Company Logo -->
+      <div style="text-align: center; background-color: #000; padding: 20px;">
+        <img src="https://elasticbeanstalk-us-east-1-867968001024.s3.us-east-1.amazonaws.com/Fork+U+logo+Final+long-01.png" alt="ForkU Logo" style="max-width: 150px; height: auto;">
+      </div>
       
-          <!-- Main Content -->
-          <div style="padding: 30px; background-color: white;">
-            <p style="margin-bottom: 20px; font-size: 16px; line-height: 1.5;">You're about to unlock a platform made just for you. Safety, compliance, getting more done – all way easier from here.</p>
-            
-            <p style="margin-bottom: 15px; font-size: 16px; line-height: 1.5;">We're excited to have you join our waitlist! Your email <strong style="color: #FF1493;">${email}</strong> has been registered successfully.</p>
-            
-            <h2 style="color: #333; font-size: 20px; margin-top: 25px; margin-bottom: 15px; border-left: 4px solid #39FF14; padding-left: 10px;">What's Next?</h2>
-            
-            <ul style="padding-left: 20px; margin-bottom: 20px;">
-              <li style="margin-bottom: 10px; line-height: 1.5;">✅ <strong>You're officially on the waitlist</strong> – we'll keep you updated on our launch.</li>
-              <li style="margin-bottom: 10px; line-height: 1.5;">✅ <strong>Early access members</strong> get exclusive insights and a chance to shape the platform.</li>
-              <li style="margin-bottom: 10px; line-height: 1.5;">✅ <strong>Stay tuned</strong> for expert tips, safety best practices, and platform updates.</li>
-            </ul>
-            
-            <p style="margin: 20px 0; padding: 15px; background-color: #f8f8f8; border-radius: 5px; line-height: 1.5; font-style: italic;">Our mission is simple: to give operators more control over their own safety and performance while making workplaces smarter and more efficient.</p>
-            
-            <p style="margin: 20px 0; line-height: 1.5;">Got questions? We'd love to hear from you! Just reach out at <a href="mailto:hello@forku.app" style="color: #FF1493; text-decoration: none; font-weight: bold;">hello@forku.app</a>, and our team will be happy to chat.</p>
-          </div>
-          
-          <!-- Footer -->
-          <div style="padding: 20px; background-color: #f8f8f8; text-align: center; border-top: 1px solid #eee;">
-            <p style="margin-bottom: 5px; font-weight: bold;">Welcome aboard,</p>
-            <p style="margin-top: 0; color: #FF1493; font-weight: bold;">The ForkU Team</p>
-            <p style="font-size: 12px; color: #999; margin-top: 20px;">Sent on: ${new Date().toLocaleString()}</p>
-          </div>
-        </div>
-      `,
-    };
+      <!-- Header Image Banner -->
+      <div style="width: 100%; background-color: #000; position: relative; text-align: center;">
+        <img src="https://elasticbeanstalk-us-east-1-867968001024.s3.us-east-1.amazonaws.com/WhatsApp+Image+2025-03-12+at+9.29.13+PM.jpeg" alt="ForkU - Simple. Smart. Safe." style="width: 100%; max-width: 600px; display: block; margin: 0 auto;">
+      </div>
+  
+      <!-- Main Content -->
+      <div style="padding: 30px; background-color: white;">
+        <p style="margin-bottom: 20px; font-size: 16px; line-height: 1.5;">You're about to unlock a platform made just for you. Safety, compliance, getting more done – all way easier from here.</p>
+        
+        <p style="margin-bottom: 15px; font-size: 16px; line-height: 1.5;">We're excited to have you join our waitlist! Your email <strong style="color: #FF1493;">${email}</strong> has been registered successfully.</p>
+        
+        <h2 style="color: #333; font-size: 20px; margin-top: 25px; margin-bottom: 15px; border-left: 4px solid #39FF14; padding-left: 10px;">What's Next?</h2>
+        
+        <ul style="padding-left: 20px; margin-bottom: 20px;">
+          <li style="margin-bottom: 10px; line-height: 1.5;">✅ <strong>You're officially on the waitlist</strong> – we'll keep you updated on our launch.</li>
+          <li style="margin-bottom: 10px; line-height: 1.5;">✅ <strong>Early access members</strong> get exclusive insights and a chance to shape the platform.</li>
+          <li style="margin-bottom: 10px; line-height: 1.5;">✅ <strong>Stay tuned</strong> for expert tips, safety best practices, and platform updates.</li>
+        </ul>
+        
+        <p style="margin: 20px 0; padding: 15px; background-color: #f8f8f8; border-radius: 5px; line-height: 1.5; font-style: italic;">Our mission is simple: to give operators more control over their own safety and performance while making workplaces smarter and more efficient.</p>
+        
+        <p style="margin: 20px 0; line-height: 1.5;">Got questions? We'd love to hear from you! Just reach out at <a href="mailto:hello@forku.app" style="color: #FF1493; text-decoration: none; font-weight: bold;">hello@forku.app</a>, and our team will be happy to chat.</p>
+      </div>
+      
+      <!-- Footer -->
+      <div style="padding: 20px; background-color: #f8f8f8; text-align: center; border-top: 1px solid #eee;">
+        <p style="margin-bottom: 5px; font-weight: bold;">Welcome aboard,</p>
+        <p style="margin-top: 0; color: #FF1493; font-weight: bold;">The ForkU Team</p>
+        <p style="font-size: 12px; color: #999; margin-top: 20px;">Sent on: ${new Date().toLocaleString()}</p>
+      </div>
+    </div>
+  `,
+};
     
     const info = await transporter.sendMail(mailOptions);
     console.log('[EMAIL] Email enviado con éxito:', info.messageId);

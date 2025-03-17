@@ -47,7 +47,7 @@ export default function Footer() {
                   HOME
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/how-it-works" className="hover:text-[#39FF14] transition-colors">
                   HOW IT WORKS
                 </Link>
@@ -56,7 +56,7 @@ export default function Footer() {
                 <Link href="/training" className="hover:text-[#39FF14] transition-colors">
                   TRAINING
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/blog" className="hover:text-[#39FF14] transition-colors">
                   BLOG
@@ -65,7 +65,7 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Support Links */}
+          {/* Support Links
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -89,7 +89,7 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </motion.div>
+          </motion.div> */}
 
           {/* Connect Links */}
           <motion.div
@@ -149,10 +149,10 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Floating Elements */}
+      {/* Floating Elements
       <div className="absolute top-1/4 left-10 w-3 h-3 bg-[#FF1493] rounded-full animate-pulse" />
       <div className="absolute bottom-1/4 right-10 w-2 h-2 bg-[#39FF14] rounded-full animate-pulse" />
-      <div className="absolute top-1/2 right-1/4 w-4 h-4 bg-[#FFFF00] rounded-full opacity-50 animate-pulse" />
+      <div className="absolute top-1/2 right-1/4 w-4 h-4 bg-[#FFFF00] rounded-full opacity-50 animate-pulse" /> */}
     </footer>
   )
 }

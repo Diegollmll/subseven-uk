@@ -9,24 +9,28 @@ interface FAQItem {
 
 const faqItems: FAQItem[] = [
   {
-    question: "WHAT IS FORKU?",
-    answer: "ForkU is a comprehensive platform designed to streamline forklift safety training and OSHA compliance. Our platform combines modern technology with industry-standard safety protocols to ensure operators are well-trained and certified."
+    question: "WHAT'S FORKU ALL ABOUT AND WHO'S IT FOR?",
+    answer: "ForkU is a tool that makes forklift safety and OSHA compliance a breeze. It's for forklift and material handling equipment (MHE) operators, and any business wanting to boost safety, meet regulations, and get the best out of their operators."
   },
   {
-    question: "WHY IS FORKLIFT SAFETY TRAINING IMPORTANT?",
-    answer: "Forklift safety training is crucial for preventing workplace accidents, ensuring OSHA compliance, and protecting both operators and workplace personnel. Proper training reduces accidents, increases efficiency, and creates a safer work environment for everyone."
+    question: "HOW DOES FORKU HELP IMPROVE SAFETY?",
+    answer: "It's like having a safety sidekick! ForkU helps catch potential hazards before they become big issues. We're talking stuff like tracking equipment maintenance, flagging areas that need attention, and sending real-time alerts if something's off. Basically, it's about making the routine tasks easy and spotting the little things to prevent the big mishaps, making your workplace safer for everyone."
   },
   {
-    question: "HOW DOES FORKU HELP WITH OSHA COMPLIANCE?",
-    answer: "ForkU provides comprehensive training materials aligned with OSHA requirements, tracks certification progress, and maintains digital records of completed training. Our platform ensures you stay compliant with all necessary regulations and keeps your documentation up-to-date."
+    question: "WHEN IS IT AVAILABLE?",
+    answer: "We're still in the testing stage with a few early fans. If you think ForkU could be a game-changer for your business and you're up for giving us some real-world feedback, shoot us an email at hello@forku.app  We'd love to hear from you!"
   },
   {
-    question: "WHAT HAPPENS IF I FAIL A CERTIFICATION EXAM?",
-    answer: "If you don't pass a certification exam, you can review the material and retake the test. Our platform provides detailed feedback on areas that need improvement and additional study resources to help you succeed in your next attempt."
+    question: "CAN MY EMPLOYER USE FORKU ACROSS A TEAM OR FACILITY?",
+    answer: "Yes. We’re piloting business tools to help supervisors deploy ForkU to teams and view performance trends. Reach out if you’re interested at hello@forku.app,"
   },
   {
-    question: "HOW DO I ACCESS TRAINING MATERIALS?",
-    answer: "Training materials are available 24/7 through our secure online platform. Once registered, you can access all content from any device, including interactive modules, video tutorials, and practice tests."
+    question: "CAN I TRACK MY OWN SAFETY PERFORMANCE?",
+    answer: "Yes, ForkU includes personal dashboards so you can see your progress, completed training, safety streaks, certifications and more."
+  },
+  {
+    question: "I HAVE AN IDEA OR WANT TO KNOW MORE, HOW DO I GET IN TOUCH?",
+    answer: "We’d love to hear from U. Reach out to us anytime at hello@forku.app, and our team will be in touch.."
   }
 ]
 
@@ -100,9 +104,9 @@ export default function FAQs() {
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute top-1/4 left-10 w-3 h-3 bg-[#FF1493] rounded-full animate-pulse" />
+      {/* <div className="absolute top-1/4 left-10 w-3 h-3 bg-[#FF1493] rounded-full animate-pulse" />
       <div className="absolute bottom-1/4 right-10 w-2 h-2 bg-[#39FF14] rounded-full animate-pulse" />
-      <div className="absolute top-1/2 right-1/4 w-4 h-4 bg-[#FFFF00] rounded-full opacity-50 animate-pulse" />
+      <div className="absolute top-1/2 right-1/4 w-4 h-4 bg-[#FFFF00] rounded-full opacity-50 animate-pulse" /> */}
     </section>
   )
 }

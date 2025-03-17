@@ -93,9 +93,9 @@ export default function Why() {
               className="relative"
             >
               <h2 className="text-5xl font-bold text-white title-font mb-2 tracking-tight">
-                WHY <span className="text-[#FF1493]">FORK</span><span className="text-[#39FF14]">U</span>?
+                WHY <span className="text-">FORK</span><span className="text-[#39FF14]">U</span>?
               </h2>
-              <div className="h-1 w-24 bg-gradient-to-r from-[#FF1493] to-[#39FF14] rounded mb-4"></div>
+              <div className="h-1 w-24 bg-gradient-to-r from-[#39FF14] to-[#39FF14] rounded mb-4"></div>
             </motion.div>
             
             <motion.p 
@@ -138,10 +138,10 @@ export default function Why() {
             >
               <div className="absolute -z-10 inset-0 bg-gradient-to-r from-[#FF1493]/20 to-[#39FF14]/20 blur-xl opacity-50 rounded-full"></div>
               <Link 
-                href="/blog/compliance"
-                className="inline-flex items-center px-6 py-2.5 rounded-full bg-gradient-to-r from-[#FF1493] to-[#39FF14] text-white font-medium transition-all duration-300 hover:shadow-lg hover:shadow-[#FF1493]/20 hover:scale-105"
+                href="/blog/osha-compliance"
+                className="inline-flex items-center px-6 py-2.5 rounded-full bg-gradient-to-r from-[#39FF14] to-[#39FF14] text-black font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[#FF1493]/20 hover:scale-105"
               >
-                Learn more about Compliance link to blog article.
+                Learn more about Compliance
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                 </svg>
@@ -152,11 +152,11 @@ export default function Why() {
       </div>
 
       {/* Floating Elements - More dynamic and varied */}
-      <div className="absolute top-1/4 left-10 w-3 h-3 bg-[#FF1493] rounded-full animate-pulse" />
+      {/* <div className="absolute top-1/4 left-10 w-3 h-3 bg-[#FF1493] rounded-full animate-pulse" />
       <div className="absolute bottom-1/4 right-10 w-2 h-2 bg-[#32CD32] rounded-full animate-pulse" />
       <div className="absolute top-1/2 right-1/4 w-4 h-4 bg-[#FFFF00] rounded-full opacity-50 animate-pulse" />
       <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-[#FF1493] rounded-full animate-ping opacity-30" />
-      <div className="absolute bottom-1/3 right-1/3 w-1 h-1 bg-[#39FF14] rounded-full animate-ping opacity-30" />
+      <div className="absolute bottom-1/3 right-1/3 w-1 h-1 bg-[#39FF14] rounded-full animate-ping opacity-30" /> */}
     </section>
   )
 }
