@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { serialize } from 'next-mdx-remote/serialize';
+
 
 // Define the path to your blog content
 const BLOG_DIRECTORY = path.join(process.cwd(), 'src/content/blog');

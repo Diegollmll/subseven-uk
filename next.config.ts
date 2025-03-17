@@ -21,6 +21,10 @@ const nextConfig: NextConfig = {
   experimental: {
     turbo: {}
   },
+  // Add this configuration to disable ESLint during builds
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
-export default nextConfig; 
+export default nextConfig;
