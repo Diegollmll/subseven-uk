@@ -32,7 +32,8 @@
   "devDependencies": {
     "@aws-sdk/types": "^3.734.0",
     "@eslint/eslintrc": "^3",
-    "@types/node": "^20",
+    "@types/next": "^9.0.0",
+    "@types/node": "^20.17.24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/three": "^0.162.0",
