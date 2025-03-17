@@ -1,8 +1,16 @@
 import { getBlogPostBySlug } from '@/lib/blogUtils'
 import { notFound } from 'next/navigation'
 import ClientBlogPost from '@/components/blog/ClientBlogPost'
+import { Metadata } from 'next'
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+type PageParams = {
+  params: {
+    slug: string
+  }
+  searchParams?: { [key: string]: string | string[] | undefined }
+}
+
+export async function generateMetadata({ params }: PageParams): Promise<Metadata> {
   try {
     const post = await getBlogPostBySlug(params.slug)
     return {
@@ -17,7 +25,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+export default async function BlogPostPage({ params }: PageParams) {
   try {
     // Get the blog post on the server
     const post = await getBlogPostBySlug(params.slug)
