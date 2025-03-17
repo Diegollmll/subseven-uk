@@ -3,14 +3,17 @@ import { notFound } from 'next/navigation'
 import ClientBlogPost from '@/components/blog/ClientBlogPost'
 import { Metadata } from 'next'
 
-type PageParams = {
-  params: {
-    slug: string
-  }
-  searchParams?: { [key: string]: string | string[] | undefined }
+// Define the params interface exactly as Next.js expects
+interface Params {
+  slug: string
 }
 
-export async function generateMetadata({ params }: PageParams): Promise<Metadata> {
+// For generateMetadata
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: Params 
+}): Promise<Metadata> {
   try {
     const post = await getBlogPostBySlug(params.slug)
     return {
@@ -25,7 +28,12 @@ export async function generateMetadata({ params }: PageParams): Promise<Metadata
   }
 }
 
-export default async function BlogPostPage({ params }: PageParams) {
+// For the page component
+export default async function BlogPostPage({ 
+  params
+}: {
+  params: Params
+}) {
   try {
     // Get the blog post on the server
     const post = await getBlogPostBySlug(params.slug)
