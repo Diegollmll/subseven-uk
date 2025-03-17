@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import JoinWaitlistPopup from "@/components/JoinWaitlistPopup"
 import Image from 'next/image'
+
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isScrolled, setIsScrolled] = useState(false)
@@ -32,47 +33,49 @@ export default function Header() {
         <header className={`fixed top-0 left-0 right-0 z-50 bg-transparent py-2 md:py-6 md:px-10`}>
             <div className="container mx-auto px-2 md:px-6 flex items-center justify-between relative z-[60]">
                 {isScrolled ? (
-                    <div className="flex items-center gap-2 bg-white rounded-full p-3 w-12 h-12">
+                    <div className="flex items-center justify-center bg-white rounded-full p-2 w-8 h-8 md:p-3 md:w-12 md:h-12">
                         <Image
                             src={"/logos/forkulogoublack.png"}
                             alt="Logo"
                             width={120}
                             height={120}
-                            className={`w-full max-w-28 md:max-w-32`}
+                            className="w-5 h-5 md:w-6 md:h-6 object-contain cursor-pointer"
                             loading="eager"
                             onClick={() => router.push('/')}
                         />
                     </div>
                 ) : (
-                    <Image
-                        src={"/logos/forkulogowhite.png"}
-                        alt="Logo"
-                        width={120}
-                        height={120}
-                        className={`w-full max-w-50 md:max-w-52`}
-                        loading="eager"
-                        onClick={() => router.push('/')}
-                    />
+                    <div className="cursor-pointer" onClick={() => router.push('/')}>
+                        <Image
+                            src={"/logos/forkulogowhite.png"}
+                            alt="Logo"
+                            width={120}
+                            height={120}
+                            className="w-24 h-6 md:w-72 md:h-16 object-contain"
+                            loading="eager"
+                        />
+                    </div>
                 )}
 
                 <div className="flex items-center gap-2 md:gap-8">
                     <button 
-                        className="bg-[#FFFF00] text-zinc-900 px-4 md:px-8 py-2.5 rounded-full font-medium hover:bg-[#39FF14] transition-colors duration-200 transform hover:scale-105 active:scale-95"
+                        className="bg-[#FFFF00] text-zinc-900 px-3 py-2 text-xs md:px-8 md:py-2.5 md:text-base rounded-full font-medium hover:bg-[#39FF14] transition-colors duration-200 transform hover:scale-105 active:scale-95"
                         onClick={handleOpenPopup}
                     >
                         JOIN NOW
                     </button>
                     {/* <ShoppingCart /> */}
                     <button
-                        className="bg-white text-zinc-900 p-2 rounded-full hover:bg-[#FF1493] hover:text-white transition-colors duration-200 transform hover:scale-105 active:scale-95"
+                        className="bg-white text-zinc-900 p-1.5 md:p-2 rounded-full hover:bg-[#FF1493] hover:text-white transition-colors duration-200 transform hover:scale-105 active:scale-95"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                     >
                         {isMenuOpen ? (
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-7 md:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         ) : (
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-7 md:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
                         )}
