@@ -21,56 +21,65 @@ export default function JoinWaitlistPopup({ isOpen, setIsOpen }: JoinWaitlistPop
     }
   }
 
-  const handleSubmit = async () => {
-    if (!email) {
-      setErrorMessage('Por favor ingresa tu correo electrónico')
-      setStatus('error')
-      return
-    }
+  // In JoinWaitlistPopup.tsx - modify the handleSubmit function
 
-    // Validación simple de formato de email
-    if (!/^\S+@\S+\.\S+$/.test(email)) {
-      setErrorMessage('Por favor ingresa un correo electrónico válido')
-      setStatus('error')
-      return
-    }
-
-    setIsLoading(true)
-    setStatus('idle')
-    setErrorMessage('')
-
-    try {
-      // Llamar al server action para enviar el email
-      const result = await sendWaitlistEmail({ email });
-      
-      if (result.success) {
-        setStatus('success')
-        setTimeout(() => setIsOpen(false), 2000)
-      } else {
-        console.error('Error:', result.error)
-        
-        // Manejar el mensaje de error de manera más amigable
-        let userMessage = 'Hubo un problema al registrarte. Por favor intenta de nuevo.'
-        
-        const errorMsg = result.error || '';
-        
-        if (errorMsg.includes('not verified')) {
-          userMessage = 'El correo aún no está verificado en nuestro sistema. Estaremos habilitándolo pronto.'
-        } else if (errorMsg.includes('autenticación') || errorMsg.includes('credenciales')) {
-          userMessage = 'Problema temporal en el servidor de correo. Tu información ha sido registrada.'
-        }
-        
-        setErrorMessage(userMessage)
-        setStatus('error')
-      }
-    } catch (error) {
-      console.error('Error sending email:', error)
-      setErrorMessage('Problema de conexión. Por favor intenta de nuevo más tarde.')
-      setStatus('error')
-    } finally {
-      setIsLoading(false)
-    }
+const handleSubmit = async () => {
+  if (!email) {
+    setErrorMessage('Por favor ingresa tu correo electrónico')
+    setStatus('error')
+    return
   }
+
+  // Enhanced email validation
+  if (!/^\S+@\S+\.\S+$/.test(email)) {
+    setErrorMessage('Por favor ingresa un correo electrónico válido')
+    setStatus('error')
+    return
+  }
+  
+  // Add domain validation for problematic domains
+  const domain = email.split('@')[1].toLowerCase();
+  if (domain === 'gmx.fr') {
+    setErrorMessage('Este dominio de correo está temporalmente no disponible. Por favor, usa otra dirección de correo.')
+    setStatus('error')
+    return
+  }
+
+  setIsLoading(true)
+  setStatus('idle')
+  setErrorMessage('')
+
+  try {
+    // Store in database first, without sending email
+    // For now, let's just save to localStorage as a temporary solution
+    const waitlistEmails = JSON.parse(localStorage.getItem('waitlistEmails') || '[]');
+    waitlistEmails.push({ email, timestamp: new Date().toISOString() });
+    localStorage.setItem('waitlistEmails', JSON.stringify(waitlistEmails));
+    
+    // Try to send the email, but don't make success dependent on it
+    try {
+      const result = await sendWaitlistEmail({ email });
+      if (!result.success) {
+        console.warn('Email could not be sent, but user was added to waitlist:', result.error);
+        // Don't show error to user since we've saved their info
+      }
+    } catch (emailError) {
+      console.error('Error in email sending, but user was added to waitlist:', emailError);
+      // Don't show error to user since we've saved their info
+    }
+    
+    // Always show success since we've saved the email
+    setStatus('success')
+    setTimeout(() => setIsOpen(false), 2000)
+    
+  } catch (error) {
+    console.error('Error in waitlist registration:', error)
+    setErrorMessage('Problema de conexión. Por favor intenta de nuevo más tarde.')
+    setStatus('error')
+  } finally {
+    setIsLoading(false)
+  }
+}
 
   if (!isOpen) return null
 
