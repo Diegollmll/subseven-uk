@@ -56,8 +56,7 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost> {
     const wordCount = content.split(/\s+/).length;
     const readingTime = `${Math.ceil(wordCount / 200)} min read`;
     
-    // Serialize the MDX content
-    const mdxSource = await serialize(content);
+    
     
     // Build and return the blog post
     return {
