@@ -32,7 +32,7 @@ export default function FullyIntegrated() {
             <div className="relative z-10 flex justify-center w-full pb-20">
               <motion.div>
                 <Image
-                  src="/forkU.svg"
+                  src="/forku.svg"
                   alt="ForkU App Preview"
                   width={600}
                   height={800}

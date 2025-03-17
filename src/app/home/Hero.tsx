@@ -99,7 +99,7 @@ export default function Hero() {
                 className="relative"
               >
                 <Image 
-                  src="/cellphoneForku.svg" 
+                  src="/cellphoneforku.svg" 
                   alt="ForkU mobile application interface showing safety tracking features"
                   width={1000}  
                   height={1400}
